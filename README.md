@@ -1,4 +1,4 @@
-# Vaults of Vaarn (Unoffical) v1.9.0
+# Vaults of Vaarn (Unoffical)
 - **Author**: TheLastScrub, code is almost entirely based on Knave (1e) System by Rabid Baboon 
 - **Foundry VTT Compatibility**: v11 
 - **Translation Support**: None  
