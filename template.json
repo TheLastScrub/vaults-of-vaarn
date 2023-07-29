@@ -87,17 +87,12 @@
       },
       "traits":
       {
-        "physique":"",
-        "face":"",
-        "skin":"",
+        "ancestry":"",
+        "body":"",
+        "face/head":"",
         "hair":"",
-        "clothing":"",
-        "virtue":"",
-        "vice":"",
-        "speech":"",
-        "background":"",
-        "misfortune":"",
-        "alignment":""
+        "attire":"",
+        "demeanour":""
       }
     }
   },
