@@ -4,6 +4,29 @@
   font-family: "Roboto", sans-serif;
 }
 
+.vaarn section span, 
+.vaarn section button, 
+.vaarn section h1, 
+.vaarn section h2, 
+.vaarn section h3, 
+.vaarn section h4, 
+.vaarn section h5, 
+.vaarn section label{
+  color: rgb(37, 67, 122) !important;
+}
+
+.vaarn section div{
+  color: rgb(12, 35, 77) !important;
+}
+
+.vaarn section input{
+  color: rgb(65, 100, 163) !important;
+}
+
+.vaarn section *{
+  border-color: rgb(42, 65, 107) !important;
+}
+
 .grid,
 .grid-2col {
   display: grid;
@@ -189,12 +212,18 @@ input.char-name-input{
   resize: vertical;
 }
 
+.vaarn .editor-content{
+  height:fit-content;    
+  min-height: 34px;
+}
+
 .vaarn .tox .tox-editor-container {
   background: #fff;
 }
 
 .vaarn .tox .tox-edit-area {
   padding: 0 8px;
+  min-height: 20px !important;
 }
 
 .vaarn .resource-label {
@@ -222,7 +251,7 @@ input.char-name-input{
   list-style: none;
   margin: 7px 0;
   padding: 0;
-  overflow-y: auto;
+  
 }
 
 .vaarn .items-list .item-header {

@@ -15,18 +15,19 @@
           <div class="abilities grid grid-3col">
             <span class="resource-label">DEFENSE</span><span class="resource-label"></span><span class="resource-label">BONUS</span>
             <input type="text" name="system.armor.value" value="{{data.system.armor.value}}" data-dtype="Number"/>
-            <button class="vaarn-armor-button resource-label armor" id="armor">ARMOR</button>
+            <span class="resource-label center">ARMOR</span>
             <span>{{data.system.armor.bonus}}</span>
           </div>
         </div>
 
         <div class="flex-group-center">
-          <div class="abilities grid grid-3col">
-            <span class="resource-label">DEFENSE</span><span class="resource-label">ABILITY</span><span class="resource-label">BONUS</span>
+          <div class="abilities grid grid-4col">
+            <span class="resource-label">DEFENSE</span><span class="resource-label">ABILITY</span><span class="resource-label">BONUS</span><span class="resource-label">DAMAGE</span>
               {{#each data.system.abilities as |ability key|}}
               <span class="ability-mod">{{numberFormat ability.defense decimals=0 sign=false}}</span>
               <button class="vaarn-ability-button resource-label {{key}}" id="{{key}}">{{key}}</button>
-              <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number" maxlength="2" max="10" min="-10"/>
+              <input type="number" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number" />
+              <input type="number" name="system.abilities.{{key}}.damage" value="{{ability.damage}}" data-dtype="Number" />
               {{/each}}
           </div>
         </div>
@@ -116,7 +117,7 @@
           {{!-- Description Tab --}}
           <div class="tab" data-group="primary" data-tab="description">
             <div class="description-editor vaarn-character-description">
-                {{editor content=data.system.biography target="system.biography" button=true owner=owner editable=editable}}
+                {{editor data.system.biography target="system.biography" button=true owner=owner editable=editable}}
             </div>
           </div>
         </section>

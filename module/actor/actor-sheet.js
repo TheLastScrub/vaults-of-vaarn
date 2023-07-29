@@ -15,7 +15,7 @@ export class VaarnActorSheet extends ActorSheet
       classes: ["vaarn", "sheet", "actor"],
       template: "systems/vaults-of-vaarn/templates/actor/actor-sheet.html",
       width: 1000,
-      height: 620,
+      height: 650,
       tabs: [{ navSelector: ".description-tabs", contentSelector: ".description-tabs-content", initial: "description" }]
     });
   }
@@ -110,18 +110,21 @@ export class VaarnActorSheet extends ActorSheet
   _onAbility_Clicked(ability)
   {
     let score = 0;
+    let damage = 0;
     let name = "";
     switch(ability)
     {
-      case "str": score = this.object.system.abilities.str.value; name="STR"; break;
-      case "dex": score = this.object.system.abilities.dex.value; name="DEX"; break;
-      case "con": score = this.object.system.abilities.con.value; name="CON"; break;
-      case "int": score = this.object.system.abilities.int.value; name="INT"; break;
-      case "wis": score = this.object.system.abilities.wis.value; name="WIS"; break;
-      case "cha": score = this.object.system.abilities.cha.value; name="CHA"; break;
+      case "str": score = this.object.system.abilities.str.value; damage = this.object.system.abilities.str.damage; name="STR"; break;
+      case "dex": score = this.object.system.abilities.dex.value; damage = this.object.system.abilities.dex.damage; name="DEX"; break;
+      case "con": score = this.object.system.abilities.con.value; damage = this.object.system.abilities.con.damage; name="CON"; break;
+      case "int": score = this.object.system.abilities.int.value; damage = this.object.system.abilities.int.damage; name="INT"; break;
+      case "wis": score = this.object.system.abilities.wis.value; damage = this.object.system.abilities.wis.damage; name="WIS"; break;
+      case "cha": score = this.object.system.abilities.cha.value; damage = this.object.system.abilities.cha.damage; name="CHA"; break;
     }
 
-    let formula = `1d20+${score}`;
+    damage = Math.abs(damage);
+
+    let formula = `1d20+${score}-${damage}`;
     let r = new Roll(formula);
     r.evaluate({async: false});
 
@@ -136,16 +139,16 @@ export class VaarnActorSheet extends ActorSheet
     return r;
   }
 
-  _onMoraleCheck(event)
+  async _onMoraleCheck(event)
   {
     event.preventDefault();
 
     let r = new Roll(`1d20+${this.object.system.morale.value}`);
-    r.evaluate({async: false});
-
+    await r.evaluate({async: true});
+    
     let messageHeader = "";
-    if(r.dice[0].total < 15){
-      messageHeader += '<span class="vaarn-ability-crit vaarn-ability-critFailure">Is fleeing</span>';
+    if(r.total < 15){
+      messageHeader += '<span class="vaarn-ability-crit vaarn-ability-critFailure">Is fleeing/surrendering</span>';
     }      
     else{
       messageHeader += '<span class="vaarn-ability-crit vaarn-ability-critSuccess">Is staying</span>';
