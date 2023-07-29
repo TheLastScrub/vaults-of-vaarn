@@ -1,0 +1,124 @@
+{
+  "id": "vaults-of-vaarn",
+  "name": "vaults of vaarn",
+  "title": "Vaults of Vaarn (Unoffical)",
+  "description": "Vaults of Varn is a system/setting based on vaarn by Leo Hunt. vaarn is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes.",
+  "version": "1.0.0",
+  "minimumCoreVersion": "11",
+  "compatibleCoreVersion": "11",
+  "compatibility": {
+    "minimum": 11,
+    "verified": "11.302"
+  },
+  "templateVersion": 2,
+  "author": "Rabid Baboon",
+  "esmodules": ["module/vaarn.js"],
+  "styles": ["css/vaarn.css"],
+  "scripts": [],
+  "packs": [
+    {
+      "name": "armor",
+      "label": "Armor",
+      "system": "vaarn",
+      "path": "./packs/armor.db",
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "name": "clothing",
+      "label": "Cothing",
+      "system": "vaarn",
+      "path": "./packs/clothing.db",
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "name": "food",
+      "label": "Food",
+      "system": "vaarn",
+      "path": "./packs/food.db",
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "name": "items",
+      "label": "Items",
+      "system": "vaarn",
+      "path": "./packs/items.db",
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "name": "light",
+      "label": "Light",
+      "system": "vaarn",
+      "path": "./packs/light.db",
+      "type": "Item",
+      "flags": {}
+      
+    },
+    {
+      "name": "macros",
+      "label": "Macros",
+      "system": "vaarn",
+      "path": "./packs/macros.db",
+      "type": "Macro",
+      "flags": {}
+    },
+    {
+      "name": "other",
+      "label": "Other",
+      "system": "vaarn",
+      "path": "./packs/other.db",
+      "type": "RollTable",
+      "flags": {}
+    },
+    {
+      "name": "rules",
+      "label": "Rules",
+      "system": "vaarn",
+      "path": "./packs/rules.db",
+      "type": "JournalEntry",
+      "flags": {}
+    },
+    {
+      "name": "spells",
+      "label": "Spells",
+      "system": "vaarn",
+      "path": "./packs/spells.db",
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "name": "starting-gear",
+      "label": "Starting Gear",
+      "system": "vaarn",
+      "path": "./packs/starting-gear.db",
+      "type": "RollTable",
+      "flags": {}
+    },
+    {
+      "name": "traits",
+      "label": "Traits",
+      "system": "vaarn",
+      "path": "./packs/traits.db",
+      "type": "RollTable",
+      "flags": {}
+    },
+    {
+      "name": "weapons",
+      "label": "Weapons",
+      "system": "vaarn",
+      "path": "./packs/weapons.db",      
+      "type": "Item",
+      "flags": {}
+    }
+  ],  
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "health",  
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt"
+}

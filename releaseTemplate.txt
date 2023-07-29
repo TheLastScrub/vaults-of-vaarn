@@ -1,0 +1,15 @@
+**vaarn v1.9.0**
+
+**Author**: Rabid Baboon
+**Version**: v1.9.0
+**Foundry VTT Compatibility**: v11
+**Translation Support**: None 
+
+**Project:** https://github.com/jrommann/vaarn
+**Manifest:** https://raw.githubusercontent.com/jrommann/vaarn/master/system.json
+
+**Description**
+vaarn is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes. Adding, subtracting and modifying rules is both expected and encouraged.
+
+**Changes**   
+ - Updated for FoundryVTT v11
