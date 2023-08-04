@@ -1,122 +1,167 @@
 {
   "id": "vaults-of-vaarn",
-  "name": "vaults of vaarn",
   "title": "Vaults of Vaarn (Unoffical)",
   "description": "Vaults of Varn is a system/setting based on vaarn by Leo Hunt. Knave is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes.",
   "version": "1.0.0",
-  "minimumCoreVersion": "11",
-  "compatibleCoreVersion": "11",
   "compatibility": {
-    "minimum": 11,
+    "minimum": "11",
     "verified": "11.302"
   },
-  "templateVersion": 2,
-  "author": "Rabid Baboon",
-  "esmodules": ["module/vaarn.js"],
-  "styles": ["css/vaarn.css"],
-  "scripts": [],
+  "esmodules": [
+    "module/vaarn.js"
+  ],
+  "styles": [
+    "css/vaarn.css"
+  ],
   "packs": [
     {
       "name": "armor",
       "label": "Armor",
       "system": "vaarn",
-      "path": "./packs/armor.db",
+      "path": "packs/armor",
       "type": "Item",
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "clothing",
       "label": "Cothing",
       "system": "vaarn",
-      "path": "./packs/clothing.db",
+      "path": "packs/clothing",
       "type": "Item",
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "food",
       "label": "Food",
       "system": "vaarn",
-      "path": "./packs/food.db",
+      "path": "packs/food",
       "type": "Item",
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "items",
       "label": "Items",
       "system": "vaarn",
-      "path": "./packs/items.db",
+      "path": "packs/items",
       "type": "Item",
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "light",
       "label": "Light",
       "system": "vaarn",
-      "path": "./packs/light.db",
+      "path": "packs/light",
       "type": "Item",
-      "flags": {}
-      
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "macros",
       "label": "Macros",
       "system": "vaarn",
-      "path": "./packs/macros.db",
+      "path": "packs/macros",
       "type": "Macro",
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "other",
       "label": "Other",
       "system": "vaarn",
-      "path": "./packs/other.db",
+      "path": "packs/other",
       "type": "RollTable",
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "rules",
       "label": "Rules",
       "system": "vaarn",
-      "path": "./packs/rules.db",
+      "path": "packs/rules",
       "type": "JournalEntry",
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "spells",
       "label": "Spells",
       "system": "vaarn",
-      "path": "./packs/spells.db",
+      "path": "packs/spells",
       "type": "Item",
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "starting-gear",
       "label": "Starting Gear",
       "system": "vaarn",
-      "path": "./packs/starting-gear.db",
+      "path": "packs/starting-gear",
       "type": "RollTable",
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "traits",
       "label": "Traits",
       "system": "vaarn",
-      "path": "./packs/traits.db",
+      "path": "packs/traits",
       "type": "RollTable",
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "weapons",
       "label": "Weapons",
       "system": "vaarn",
-      "path": "./packs/weapons.db",      
+      "path": "packs/weapons",
       "type": "Item",
-      "flags": {}
+      "flags": {},
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
-  ],  
+  ],
   "gridDistance": 5,
   "gridUnits": "ft",
-  "primaryTokenAttribute": "health",  
+  "primaryTokenAttribute": "health",
   "url": "https://github.com/TheLastScrub/vaults-of-vaarn-foundryvtt",
   "manifest": "https://github.com/TheLastScrub/vaults-of-vaarn-foundryvtt/raw/main/system.json",
   "download": "https://github.com/TheLastScrub/vaults-of-vaarn-foundryvtt/archive/v1.0.0.zip",
