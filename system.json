@@ -2,7 +2,7 @@
   "id": "vaults-of-vaarn",
   "title": "Vaults of Vaarn (Unoffical)",
   "description": "Vaults of Varn is a system/setting based on vaarn by Leo Hunt. Knave is a rules toolkit created by Ben Milton for running old school fantasy RPGs without classes.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": {
     "minimum": "11",
     "verified": "11.302"
@@ -152,6 +152,6 @@
   "primaryTokenAttribute": "health",
   "url": "https://github.com/TheLastScrub/vaults-of-vaarn-foundryvtt",
   "manifest": "https://github.com/TheLastScrub/vaults-of-vaarn-foundryvtt/raw/main/system.json",
-  "download": "https://github.com/TheLastScrub/vaults-of-vaarn-foundryvtt/archive/v1.0.0.zip",
+  "download": "https://github.com/TheLastScrub/vaults-of-vaarn-foundryvtt/archive/v1.0.1.zip",
   "license": "LICENSE.txt"
 }
