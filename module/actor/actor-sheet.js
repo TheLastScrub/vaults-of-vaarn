@@ -152,7 +152,12 @@ export class VaarnActorSheet extends ActorSheet
 
     damage = Math.abs(damage);
 
-    let formula = `1d20+${score}-${damage}`;
+    let formula = `1d20+${score}`;
+
+    if(damage !== 0){
+      formula += `-${damage}`;
+    }
+
     let r = new Roll(formula);
     r.evaluate({async: false});
 
