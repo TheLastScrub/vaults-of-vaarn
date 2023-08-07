@@ -9,6 +9,9 @@
             <span class="resource-label center">HP</span>
             <input type="text" name="system.health.max" value="{{data.system.health.max}}" data-dtype="Number"/>
           </div>
+          <span>Set health based on level: </span>
+          <a class="update-health-to-level-x4" title="Set health based off level (for NPCs)."> x4 <i class="fas fa-repeat"></i>  </a>
+          <a class="update-health-to-level-x5" title="Set health based off level (for NPCs)."> x5 <i class="fas fa-repeat"></i></a>
         </div>
 
         <div class="flex-group-center">
@@ -29,7 +32,9 @@
               <input type="number" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number" />
               <input type="number" name="system.abilities.{{key}}.damage" value="{{ability.damage}}" data-dtype="Number" />
               {{/each}}
+              
           </div>
+          <a class="update-all-bonuses-to-level" title="Set all bonuses to level (for NPCs)."><i class="fas fa-repeat"></i> Set All Bonus to {{data.system.level.value}}</a>
         </div>
 
         <div class="flex-group-center">

@@ -48,6 +48,9 @@ export class VaarnActorSheet extends ActorSheet
     html.find('.vaarn-ability-button').click(ev => { this._onAbility_Clicked($(ev.currentTarget)[0].id); });
     html.find('.vaarn-morale-button').click(this._onMoraleCheck.bind(this));
     html.find('.vaarn-armor-button').click(this._onArmorCheck.bind(this));
+    html.find('.update-all-bonuses-to-level').click(this._updateBonusesToLevel.bind(this));
+    html.find('.update-health-to-level-x4').click(this._updateHealthToLevelx4.bind(this));
+    html.find('.update-health-to-level-x5').click(this._updateHealthToLevelx5.bind(this));
 
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
@@ -162,6 +165,48 @@ export class VaarnActorSheet extends ActorSheet
 
     r.toMessage({speaker: ChatMessage.getSpeaker({ actor: this.actor }), flavor: messageHeader});
     return r;
+  }
+
+  async _updateHealthToLevelx4(event){
+    await this._updateHealthToLevelTimesModifier(4);
+  }
+
+  async _updateHealthToLevelx5(event){
+    await this._updateHealthToLevelTimesModifier(5);
+  }
+
+  async _updateHealthToLevelTimesModifier(modifier){
+    let updatedData = duplicate(this.actor.system);
+
+    updatedData.health.max = updatedData.level.value * modifier;
+    updatedData.health.value = updatedData.level.value * modifier;
+
+    await this.actor.update({'data': updatedData});
+  }
+
+  async _updateBonusesToLevel(event){
+
+    let updatedData = duplicate(this.actor.system);
+    
+    updatedData.abilities.str.max = updatedData.level.value;
+    updatedData.abilities.str.value = updatedData.level.value;
+
+    updatedData.abilities.dex.max = updatedData.level.value;
+    updatedData.abilities.dex.value = updatedData.level.value;
+
+    updatedData.abilities.con.max = updatedData.level.value;
+    updatedData.abilities.con.value = updatedData.level.value;
+
+    updatedData.abilities.int.max = updatedData.level.value;
+    updatedData.abilities.int.value = updatedData.level.value;
+
+    updatedData.abilities.psy.max = updatedData.level.value;
+    updatedData.abilities.psy.value = updatedData.level.value;
+
+    updatedData.abilities.ego.max = updatedData.level.value;
+    updatedData.abilities.ego.value = updatedData.level.value;
+
+    await this.actor.update({'data': updatedData});
   }
 
   async _onMoraleCheck(event)
