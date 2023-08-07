@@ -37,10 +37,18 @@ export class VaarnActor extends Actor {
     for(let i of actorData.items)
     {
       //calculate max inventory slots and used slots
-      used += i.system.slots;
+
+      if(i.type !== 'trait'){
+        used += i.system.slots;
+      }      
+
       //check if actor can use spell based on level
-      if(i.type === "spell")
-        i.system.spellUsable = (Number(actorData.system.level.value) >= Number(i.system.level));
+      //if(i.type === "spell")
+      //i.system.spellUsable = (Number(actorData.system.level.value) >= Number(i.system.level));
+      if(i.type === 'mysticGift'){
+        i.system.spellUsable = true //(Number(actorData.system.level.value) >= Number(i.system.level));
+      }
+        
     }
     data.inventorySlots.used = used;
 

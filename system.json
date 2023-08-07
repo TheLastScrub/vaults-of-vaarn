@@ -111,18 +111,6 @@
       }
     },
     {
-      "name": "spells",
-      "label": "Spells",
-      "system": "vaarn",
-      "path": "packs/spells",
-      "type": "Item",
-      "flags": {},
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
       "name": "starting-gear",
       "label": "Starting Gear",
       "system": "vaarn",

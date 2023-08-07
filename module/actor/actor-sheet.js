@@ -26,8 +26,11 @@ export class VaarnActorSheet extends ActorSheet
   
   getData()
   {
-    let sheet = super.getData();
-    return sheet;
+    let data = super.getData();
+
+    this._prepareCharacterItems(data);
+
+    return data;
   }
 
   /** @override */
@@ -62,10 +65,13 @@ export class VaarnActorSheet extends ActorSheet
 
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
-      const button = ev.currentTarget;
-      const li = button.closest(".item");
-      const item = this.actor.items.get(li?.dataset.itemId);
-      return item.delete();
+      //const button = ev.currentTarget;
+      //const li = button.closest(".item");
+      //const item = this.actor.items.get(li?.dataset.itemId);
+      //return item.delete();
+      const el = $(ev.currentTarget).parents(".item");
+      let options = {};
+      this.actor.deleteEmbeddedDocuments("Item", [el.data('item-id')], options);
     });
 
     //inventory weapon rolls
@@ -105,6 +111,25 @@ export class VaarnActorSheet extends ActorSheet
 
     const cls = getDocumentClass("Item");
     return cls.create(itemData, {parent: this.actor});    
+  }
+
+  async _prepareCharacterItems(sheetData){
+
+    const actorData = sheetData.actor;
+    const traits = [];
+    const heldItems = [];
+
+    for (let i of sheetData.items) {
+      if (i.type === 'trait') {                
+        traits.push(i);
+      }
+      else{
+        heldItems.push(i);
+      }
+    }
+
+    actorData.traits = traits;
+    actorData.heldItems = heldItems;
   }
 
   _onAbility_Clicked(ability)
