@@ -339,3 +339,7 @@ input.char-name-input{
 {
   text-align: left;
 }
+
+.vaarn .item.flexrow{
+  overflow: clip !important;
+}

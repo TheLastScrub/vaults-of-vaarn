@@ -148,6 +148,8 @@ export class VaarnActorSheet extends ActorSheet
       case "int": score = this.object.system.abilities.int.value; damage = this.object.system.abilities.int.damage; name="INT"; break;
       case "wis": score = this.object.system.abilities.wis.value; damage = this.object.system.abilities.wis.damage; name="WIS"; break;
       case "cha": score = this.object.system.abilities.cha.value; damage = this.object.system.abilities.cha.damage; name="CHA"; break;
+      case "psy": score = this.object.system.abilities.psy.value; damage = this.object.system.abilities.psy.damage; name="PSY"; break;
+      case "ego": score = this.object.system.abilities.ego.value; damage = this.object.system.abilities.ego.damage; name="EGO"; break;
     }
 
     damage = Math.abs(damage);

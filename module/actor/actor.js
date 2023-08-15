@@ -16,6 +16,8 @@ export class VaarnActor extends Actor {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     if (this.type === 'character') this._prepareCharacterData(this);
+
+    if (this.type === 'NPC') this._prepareCharacterData(this);
   }
 
   /**
@@ -55,7 +57,7 @@ export class VaarnActor extends Actor {
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(data.abilities)) 
     {      
-      ability.defense = Math.floor((ability.value + 10));      
+      ability.defense = Math.floor((ability.value + 10)) - Math.abs(ability.damage);  
     }
   }
 

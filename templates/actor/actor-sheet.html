@@ -9,9 +9,13 @@
             <span class="resource-label center">HP</span>
             <input type="text" name="system.health.max" value="{{data.system.health.max}}" data-dtype="Number"/>
           </div>
+          
+          {{#if_eq data.type 'NPC' }}
           <span>Set health based on level: </span>
           <a class="update-health-to-level-x4" title="Set health based off level (for NPCs)."> x4 <i class="fas fa-repeat"></i>  </a>
           <a class="update-health-to-level-x5" title="Set health based off level (for NPCs)."> x5 <i class="fas fa-repeat"></i></a>
+          {{/if_eq}}
+
         </div>
 
         <div class="flex-group-center">
@@ -34,17 +38,25 @@
               {{/each}}
               
           </div>
+          
+          {{#if_eq data.type 'NPC' }}
           <a class="update-all-bonuses-to-level" title="Set all bonuses to level (for NPCs)."><i class="fas fa-repeat"></i> Set All Bonus to {{data.system.level.value}}</a>
+          {{/if_eq}}
+
         </div>
 
         <div class="flex-group-center">
           <span class="resource-label">MOVEMENT</span>
           <input type="text" name="system.movement" value="{{data.system.movement}}" data-dtype="String"/>
+
+          {{#if_eq data.type 'character' }}
           <div class="abilities grid grid-3col">
             <span class="resource-label">MORALE</span>
             <input type="text" name="system.morale.value" value="{{data.system.morale.value}}" data-dtype="Number"/>
             <button class="vaarn-morale-button resource-label">Check</button>
           </div>
+          {{/if_eq}}
+          
         </div>
       </div>
    <!--end first col-->
