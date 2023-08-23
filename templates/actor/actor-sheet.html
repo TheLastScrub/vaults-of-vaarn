@@ -56,11 +56,14 @@
             <button class="vaarn-morale-button resource-label">Check</button>
           </div>
           {{/if_eq}}
-          
+
         </div>
       </div>
+
    <!--end first col-->
+
    <!--second col-->
+
       <div class="flex-group-center">
           <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"/>
           <div class="header-fields">
@@ -70,10 +73,14 @@
                 <label for="system.level.value" class="resource-label">LEVEL</label>
                 <input type="text" name="system.level.value" value="{{data.system.level.value}}" data-dtype="Number"/>
               </div>
+
+              {{#if_eq data.type 'character' }}
               <div class="flex-group-center">
                 <label for="system.xp.value" class="resource-label">XP</label>
                 <input type="text" name="system.xp.value" value="{{data.system.xp.value}}" data-dtype="Number"/>
               </div>
+              {{/if_eq}}
+
               </div>
           </div>
           {{!-- Sheet Tab Navigation --}}
@@ -116,8 +123,11 @@
           </div>
         </section>
       </div>
+
      <!--end second col-->
+
      <!--third col-->
+
       <div class="flex-group-center">
           {{!-- Owned Items Tab --}}
           <div class="items" data-group="primary" data-tab="items">
@@ -150,6 +160,8 @@
               </ol>
           </div>
       </div>
+
     <!--end third col-->
+    
   </div>
 </form>
