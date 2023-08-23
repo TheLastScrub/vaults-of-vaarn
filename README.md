@@ -24,6 +24,12 @@ https://github.com/jrommann/knave
 
 # Changelog
 
+**1.0.2**
+- Added NPC as separate actor type, hide/show certain things based on that (sheet is mostly the same)
+
+**1.0.1**
+- Made more changes to make system more Vaarn-specific, and added some automation
+
 **1.0.0** 
 2023-07-27
 - Changed to have Vaarn statistics instead of Knave values.
